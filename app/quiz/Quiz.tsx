@@ -55,6 +55,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
       />
       <div className='flex justify-between mt-16'>
         <Button text='Prev' onClick={() => handleChangeQuestion(-1)} />
+        <Button text='Quit' onClick={()=>router.push('/')} />
         <Button
           text={currentQuestionIndex === totalQuestions - 1 ? 'End' : 'Next'}
           onClick={currentQuestionIndex === totalQuestions - 1 ? () => router.push('/') : () => handleChangeQuestion(1)}

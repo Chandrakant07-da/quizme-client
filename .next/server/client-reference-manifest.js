@@ -3422,6 +3422,110 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
+    "(app-client)/./app/quiz/Quiz.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/quiz/Quiz.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/quiz/Quiz.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/quiz/Quiz.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./components/Button/Button.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Button/Button.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./components/Button/Button.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./components/Button/Button.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./components/QuestionCard/QuestionCard.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./components/QuestionCard/helpers.ts": {
+      "*": {
+        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "getBGColor": {
+        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
+        "name": "getBGColor",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./assets/home-pic.png": {
       "*": {
         "id": "(sc_client)/./assets/home-pic.png",
@@ -3465,6 +3569,14 @@ self.__RSC_MANIFEST={
         ],
         "async": false
       },
+      "GetStaticProps": {
+        "id": "(sc_client)/./app/page.tsx",
+        "name": "GetStaticProps",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
       "default": {
         "id": "(sc_client)/./app/page.tsx",
         "name": "default",
@@ -3474,28 +3586,36 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/./components/Button/Button.tsx": {
+    "(app-client)/./app/quiz/page.tsx": {
       "*": {
-        "id": "(sc_client)/./components/Button/Button.tsx",
+        "id": "(sc_client)/./app/quiz/page.tsx",
         "name": "*",
         "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
+          "app/page:static/chunks/app/page.js"
         ],
         "async": false
       },
       "": {
-        "id": "(sc_client)/./components/Button/Button.tsx",
+        "id": "(sc_client)/./app/quiz/page.tsx",
         "name": "",
         "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
+          "app/page:static/chunks/app/page.js"
         ],
         "async": false
       },
       "default": {
-        "id": "(sc_client)/./components/Button/Button.tsx",
+        "id": "(sc_client)/./app/quiz/page.tsx",
         "name": "default",
         "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "getSubjects": {
+        "id": "(sc_client)/./app/quiz/page.tsx",
+        "name": "getSubjects",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
         ],
         "async": false
       }
@@ -3672,6 +3792,58 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
+    "(app-client)/./types/quiz.ts": {
+      "*": {
+        "id": "(sc_client)/./types/quiz.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./types/quiz.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "Difficulty": {
+        "id": "(sc_client)/./types/quiz.ts",
+        "name": "Difficulty",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./utils/arrayUtils.ts": {
+      "*": {
+        "id": "(sc_client)/./utils/arrayUtils.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./utils/arrayUtils.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "shuffleArray": {
+        "id": "(sc_client)/./utils/arrayUtils.ts",
+        "name": "shuffleArray",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./assets/react-quiz-logo.svg": {
       "*": {
         "id": "(sc_client)/./assets/react-quiz-logo.svg",
@@ -3694,84 +3866,6 @@ self.__RSC_MANIFEST={
         "name": "default",
         "chunks": [
           "app/layout:static/chunks/app/layout.js"
-        ],
-        "async": false
-      }
-    },
-    "(app-client)/./app/quiz/Quiz.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/quiz/Quiz.tsx",
-        "name": "*",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./app/quiz/Quiz.tsx",
-        "name": "",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/quiz/Quiz.tsx",
-        "name": "default",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      }
-    },
-    "(app-client)/./components/QuestionCard/QuestionCard.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
-        "name": "*",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
-        "name": "",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./components/QuestionCard/QuestionCard.tsx",
-        "name": "default",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      }
-    },
-    "(app-client)/./components/QuestionCard/helpers.ts": {
-      "*": {
-        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
-        "name": "*",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
-        "name": "",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
-        ],
-        "async": false
-      },
-      "getBGColor": {
-        "id": "(sc_client)/./components/QuestionCard/helpers.ts",
-        "name": "getBGColor",
-        "chunks": [
-          "app/quiz/page:static/chunks/app/quiz/page.js"
         ],
         "async": false
       }
@@ -11224,6 +11318,102 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx": {
+      "id": "(app-client)/./app/quiz/Quiz.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx#": {
+      "id": "(app-client)/./app/quiz/Quiz.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx#default": {
+      "id": "(app-client)/./app/quiz/Quiz.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx": {
+      "id": "(app-client)/./components/Button/Button.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx#": {
+      "id": "(app-client)/./components/Button/Button.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx#default": {
+      "id": "(app-client)/./components/Button/Button.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx": {
+      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx#": {
+      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx#default": {
+      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts": {
+      "id": "(app-client)/./components/QuestionCard/helpers.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts#": {
+      "id": "(app-client)/./components/QuestionCard/helpers.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts#getBGColor": {
+      "id": "(app-client)/./components/QuestionCard/helpers.ts",
+      "name": "getBGColor",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/assets/home-pic.png": {
       "id": "(app-client)/./assets/home-pic.png",
       "name": "*",
@@ -11264,6 +11454,14 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/page.tsx#GetStaticProps": {
+      "id": "(app-client)/./app/page.tsx",
+      "name": "GetStaticProps",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/page.tsx#default": {
       "id": "(app-client)/./app/page.tsx",
       "name": "default",
@@ -11272,27 +11470,35 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx": {
-      "id": "(app-client)/./components/Button/Button.tsx",
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/page.tsx": {
+      "id": "(app-client)/./app/quiz/page.tsx",
       "name": "*",
       "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx#": {
-      "id": "(app-client)/./components/Button/Button.tsx",
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/page.tsx#": {
+      "id": "(app-client)/./app/quiz/page.tsx",
       "name": "",
       "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/Button/Button.tsx#default": {
-      "id": "(app-client)/./components/Button/Button.tsx",
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/page.tsx#default": {
+      "id": "(app-client)/./app/quiz/page.tsx",
       "name": "default",
       "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/page.tsx#getSubjects": {
+      "id": "(app-client)/./app/quiz/page.tsx",
+      "name": "getSubjects",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
@@ -12144,6 +12350,54 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/types/quiz.ts": {
+      "id": "(app-client)/./types/quiz.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/types/quiz.ts#": {
+      "id": "(app-client)/./types/quiz.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/types/quiz.ts#Difficulty": {
+      "id": "(app-client)/./types/quiz.ts",
+      "name": "Difficulty",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/utils/arrayUtils.ts": {
+      "id": "(app-client)/./utils/arrayUtils.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/utils/arrayUtils.ts#": {
+      "id": "(app-client)/./utils/arrayUtils.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/utils/arrayUtils.ts#shuffleArray": {
+      "id": "(app-client)/./utils/arrayUtils.ts",
+      "name": "shuffleArray",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/globals.css#": {
       "id": "null",
       "name": "default",
@@ -12179,78 +12433,6 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx": {
-      "id": "(app-client)/./app/quiz/Quiz.tsx",
-      "name": "*",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx#": {
-      "id": "(app-client)/./app/quiz/Quiz.tsx",
-      "name": "",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/quiz/Quiz.tsx#default": {
-      "id": "(app-client)/./app/quiz/Quiz.tsx",
-      "name": "default",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx": {
-      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
-      "name": "*",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx#": {
-      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
-      "name": "",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/QuestionCard.tsx#default": {
-      "id": "(app-client)/./components/QuestionCard/QuestionCard.tsx",
-      "name": "default",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts": {
-      "id": "(app-client)/./components/QuestionCard/helpers.ts",
-      "name": "*",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts#": {
-      "id": "(app-client)/./components/QuestionCard/helpers.ts",
-      "name": "",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
-      ],
-      "async": false
-    },
-    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/QuestionCard/helpers.ts#getBGColor": {
-      "id": "(app-client)/./components/QuestionCard/helpers.ts",
-      "name": "getBGColor",
-      "chunks": [
-        "app/quiz/page:static/chunks/app/quiz/page.js"
       ],
       "async": false
     }
