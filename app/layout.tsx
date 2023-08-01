@@ -10,8 +10,8 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: 'React-Quiz Application',
-  description: 'Become the quiz master...!'
+  title: 'React Quiz 2023',
+  description: 'Become the quiz master!'
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
