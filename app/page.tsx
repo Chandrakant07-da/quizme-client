@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 // Components
 import Button from "@/components/Button/Button";
 // Homepage image
@@ -12,47 +12,51 @@ import TableData from "@/types/table";
 
 const Home = () => {
   const router = useRouter();
-  let score = 0;
   const [userName, setUserName] = useState("");
   const [showButton, setShowButton] = useState(false);
   const [showTable, setShowTable] = useState(false);
   const [currentUser, setCurrentuser] = useState("Unknown...");
-  const [tableInput, setTableInput] = useState([{name:"",score:0}]);
+  const [tableInput, setTableInput] = useState([{ name: "", score: 0 }]);
   const handleButtonClick = () => router.push("/quiz");
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setShowButton(true);
-    function localStoreHandle() {
-      const existName = localStorage.getItem(userName);
-      if (existName !== null) {
-        // setting current-user
-        const data = userName;
-        const dataString = JSON.stringify(data);
-        localStorage.setItem("current-user", dataString);
-      } else {
-        // setting username with score value
-        const dataLocal = {
-          score: [],
-        };
-        const dataString = JSON.stringify(dataLocal);
-        localStorage.setItem(userName, dataString);
-        // setting current-user
-        const data = userName;
-        const dataStr = JSON.stringify(data);
-        localStorage.setItem("current-user", dataStr);
-      }
 
-      getUserData();
-    }
     localStoreHandle();
     // Do your work with submitted name
     console.log("User Name Submitted :", userName);
+    setCurrentuser(userName);
   };
+
+  function localStoreHandle() {
+    // Deleting the item with key 'ally-supports-cache' from localStorage
+    localStorage.removeItem('ally-supports-cache');
+    const existName = localStorage.getItem(userName);
+    if (existName !== null) {
+      // setting current-user
+      const data = userName;
+      const dataString = JSON.stringify(data);
+      localStorage.setItem("current-user", dataString);
+    } else {
+      // setting username with score value
+      const dataLocal = {
+        score: [],
+      };
+      const dataString = JSON.stringify(dataLocal);
+      localStorage.setItem(userName, dataString);
+      // setting current-user
+      const data = userName;
+      const dataStr = JSON.stringify(data);
+      localStorage.setItem("current-user", dataStr);
+    }
+
+    getUserData();
+  }
   const getUserData = () => {
     // Get the total number of key-value pairs stored in localStorage
-    const totalItems = localStorage.length;  
+    const totalItems = localStorage.length;
     // Initialize an empty object to store all data
-    const allData: { [key: string]: string } = {};  
+    const allData: { [key: string]: string } = {};
     // Loop through each key and get its associated value
     for (let i = 0; i < totalItems; i++) {
       const key: any = localStorage.key(i);
@@ -61,35 +65,33 @@ const Home = () => {
     }
 
     console.log(allData);
-    if(allData){
+    if (allData) {
       try {
         // Extract current-user value from the input
-      const currentUser = allData["current-user"];
-      // Convert other properties to the desired format and store in the data array
-      const allUserData = Object.keys(allData)
-        .filter((key) => key !== "current-user")
-        .map((name) => ({
-          name,
-          score: (allData[name] as any)?.score[0], // Type assertion here
-        }));
-  
-      // // Output the results
-      // console.log(currentUser);
-      // console.log(allUserData);
+        const currentUser = allData["current-user"];
+        // Convert other properties to the desired format and store in the data array
+        const allUserData = Object.keys(allData)
+          .filter((key) => key !== "current-user")
+          .map((name) => ({
+            name,
+            score: (allData[name] as any)?.score[0], // Type assertion here
+          }));
 
-      // Setting the output into state
-      setCurrentuser(currentUser);
-      setTableInput(allUserData);          
+        // // Output the results
+        // console.log(currentUser);
+        // console.log(allUserData);
+
+        // Setting the output into state
+        setCurrentuser(currentUser);
+        setTableInput(allUserData);
       } catch (error) {
         console.log(error);
-        
       }
-      
     }
   };
   useEffect(() => {
     getUserData();
-  },[currentUser])
+  }, [currentUser]);
 
   const tempData: TableData = {
     rows: tableInput,
@@ -109,7 +111,7 @@ const Home = () => {
         <p className="text-[#9F50AC] pt-2 pb-2 text-[20px]">
           Submit your name to start quiz..!{" "}
         </p>
-        <p className="text-[20px] rounded-[10px] text-black pt-4 p-2 border-[4px]-black">
+        <section className="text-[20px] rounded-[10px] text-black pt-4 p-2 border-[4px]-black">
           <form onSubmit={handleSubmit}>
             {/* Input field */}
             <input
@@ -132,8 +134,8 @@ const Home = () => {
           >
             Track User
           </button>
-        </p>
-        
+        </section>
+
         {showButton ? (
           <Button text="Start Quiz" onClick={handleButtonClick} />
         ) : null}
