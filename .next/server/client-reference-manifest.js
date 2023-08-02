@@ -3500,6 +3500,32 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
+    "(app-client)/./components/table/Table.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/table/Table.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./components/table/Table.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./components/table/Table.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./node_modules/next/dist/client/image.js": {
       "*": {
         "id": "(sc_client)/./node_modules/next/dist/client/image.js",
@@ -3779,6 +3805,9 @@ self.__RSC_MANIFEST={
   },
   "edgeSSRModuleMapping": {},
   "cssFiles": {
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/page": [
+      "static/css/app/page.css"
+    ],
     "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/app/layout": [
       "static/css/app/layout.css"
     ]
@@ -11224,6 +11253,13 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/table/Table.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
     "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/assets/home-pic.png": {
       "id": "(app-client)/./assets/home-pic.png",
       "name": "*",
@@ -11293,6 +11329,30 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": [
         "app/quiz/page:static/chunks/app/quiz/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/table/Table.tsx": {
+      "id": "(app-client)/./components/table/Table.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/table/Table.tsx#": {
+      "id": "(app-client)/./components/table/Table.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/home/chandra.kant/Documents/JavaScript-FullStack-Tarining/Quiz-App (Assessment)/quizme-client/components/table/Table.tsx#default": {
+      "id": "(app-client)/./components/table/Table.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },

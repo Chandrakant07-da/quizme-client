@@ -1,0 +1,29 @@
+/* components/MyTableComponent.module.css */
+
+/* Add a local class 'myTable' to the table */
+.myTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Rest of the styles remain the same */
+  .myTable th,
+  .myTable td {
+    padding: 10px;
+    border: 1px solid #040339;
+    border-radius: 5px;
+  }
+  
+  .myTable thead {
+    background-color: #9ec576;
+  }
+  
+  .myTable tr:nth-child(even) {
+    background-color: #f9f9f99d;
+  }
+  
+  .myTable tr:hover {
+    background-color: #dfdd99;
+  }
+  
