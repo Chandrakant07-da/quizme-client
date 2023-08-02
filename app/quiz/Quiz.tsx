@@ -38,6 +38,19 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
     if (newQuestionIndex < 0 || newQuestionIndex >= totalQuestions) return;
     setCurrentQuestionIndex(newQuestionIndex);
   };
+  function localStoreHandle(){
+    const currentName = localStorage.getItem('current-user')
+    if(currentName !== null){
+      const nameData = JSON.parse(currentName)
+
+      const dataLocal ={
+        score:[score]
+      }
+      const dataString = JSON.stringify(dataLocal)
+      localStorage.setItem(nameData, dataString);
+    }
+  }
+
 
   return (
     <div className='text-white text-center'>
@@ -55,10 +68,16 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
       />
       <div className='flex justify-between mt-16'>
         <Button text='Prev' onClick={() => handleChangeQuestion(-1)} />
-        <Button text='Quit' onClick={()=>router.push('/')} />
+        <Button text='Quit' onClick={()=>{
+            localStoreHandle();
+            router.push('/');
+      }} />
         <Button
           text={currentQuestionIndex === totalQuestions - 1 ? 'End' : 'Next'}
-          onClick={currentQuestionIndex === totalQuestions - 1 ? () => router.push('/') : () => handleChangeQuestion(1)}
+          onClick={currentQuestionIndex === totalQuestions - 1 ? () => {
+            localStoreHandle();
+            router.push('/');
+        } : () => handleChangeQuestion(1)}
         />
       </div>
     </div>

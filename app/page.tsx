@@ -10,13 +10,34 @@ import HomepageImage from "assets/home-pic.png";
 
 const Home = () => {
   const router = useRouter();
+  let score = 0
   const [userName, setUserName] = useState("");
   const [showButton, setShowButton] = useState(false)
   const handleButtonClick = () => router.push("/quiz");
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setShowButton(true);
- 
+    function localStoreHandle(){
+      const existName = localStorage.getItem(userName)
+      if(existName !== null){
+        // setting current-user
+        const data = userName
+        const dataString = JSON.stringify(data)
+        localStorage.setItem('current-user', dataString);
+      }else{
+        // setting username with score value
+        const dataLocal ={
+          score:[]
+        }
+        const dataString = JSON.stringify(dataLocal)
+        localStorage.setItem(userName, dataString);
+        // setting current-user
+        const data = userName
+        const dataStr = JSON.stringify(data)
+        localStorage.setItem('current-user', dataStr);
+      }
+    }
+    localStoreHandle()
     // Do your work with submitted name
     console.log("User Name Submitted :", userName);
   };
