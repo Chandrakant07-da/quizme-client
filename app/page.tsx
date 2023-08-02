@@ -139,7 +139,7 @@ const Home = () => {
         {showButton ? (
           <Button text="Start Quiz" onClick={handleButtonClick} />
         ) : null}
-        {currentUser.length ? (
+        {currentUser ? (
           <p className="text-[20px] bg-[#f2bfca] rounded-[10px] text-black pt-3 pb-2 pr-2 width-[40%]">
             Current User is : {currentUser}
           </p>
