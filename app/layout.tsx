@@ -10,7 +10,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: 'React Quiz 2023',
+  title: 'QuizMe ! ',
   description: 'Become the quiz master!'
 };
 

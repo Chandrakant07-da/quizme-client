@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 // Components
 import Button from "@/components/Button/Button";
 // Homepage image
@@ -16,7 +16,7 @@ const Home = () => {
   const [userName, setUserName] = useState("");
   const [showButton, setShowButton] = useState(false);
   const [showTable, setShowTable] = useState(false);
-  const [currentUser, setCurrentuser] = useState("");
+  const [currentUser, setCurrentuser] = useState("Unknown...");
   const [tableInput, setTableInput] = useState([{name:"",score:0}]);
   const handleButtonClick = () => router.push("/quiz");
   const handleSubmit = (event: any) => {
@@ -41,6 +41,8 @@ const Home = () => {
         const dataStr = JSON.stringify(data);
         localStorage.setItem("current-user", dataStr);
       }
+
+      getUserData();
     }
     localStoreHandle();
     // Do your work with submitted name
@@ -48,11 +50,9 @@ const Home = () => {
   };
   const getUserData = () => {
     // Get the total number of key-value pairs stored in localStorage
-    const totalItems = localStorage.length;
-
+    const totalItems = localStorage.length;  
     // Initialize an empty object to store all data
-    const allData: { [key: string]: string } = {};
-
+    const allData: { [key: string]: string } = {};  
     // Loop through each key and get its associated value
     for (let i = 0; i < totalItems; i++) {
       const key: any = localStorage.key(i);
@@ -61,25 +61,35 @@ const Home = () => {
     }
 
     console.log(allData);
-    // Extract current-user value from the input
-    const currentUser = allData["current-user"];
-
-    // Convert other properties to the desired format and store in the data array
-    const allUserData = Object.keys(allData)
-      .filter((key) => key !== "current-user")
-      .map((name) => ({
-        name,
-        score: (allData[name] as any).score[0], // Type assertion here
-      }));
-
-    // Output the results
-    console.log(currentUser);
-    console.log(allUserData);
-    // Setting the output into state
-    setCurrentuser(currentUser);
-    setTableInput(allUserData);
-  };
+    if(allData){
+      try {
+        // Extract current-user value from the input
+      const currentUser = allData["current-user"];
+      // Convert other properties to the desired format and store in the data array
+      const allUserData = Object.keys(allData)
+        .filter((key) => key !== "current-user")
+        .map((name) => ({
+          name,
+          score: (allData[name] as any)?.score[0], // Type assertion here
+        }));
   
+      // // Output the results
+      // console.log(currentUser);
+      // console.log(allUserData);
+
+      // Setting the output into state
+      setCurrentuser(currentUser);
+      setTableInput(allUserData);          
+      } catch (error) {
+        console.log(error);
+        
+      }
+      
+    }
+  };
+  useEffect(() => {
+    getUserData();
+  },[currentUser])
 
   const tempData: TableData = {
     rows: tableInput,
@@ -99,7 +109,7 @@ const Home = () => {
         <p className="text-[#9F50AC] pt-2 pb-2 text-[20px]">
           Submit your name to start quiz..!{" "}
         </p>
-        <p className="text-[20px] rounded-[10px] text-black pb-2 pr-2 border-[4px]-black">
+        <p className="text-[20px] rounded-[10px] text-black pt-4 p-2 border-[4px]-black">
           <form onSubmit={handleSubmit}>
             {/* Input field */}
             <input
@@ -123,13 +133,14 @@ const Home = () => {
             Track User
           </button>
         </p>
-        {currentUser.length ? (
-          <p className="text-[20px] bg-[#f2bfca] rounded-[10px] text-black pb-2 pr-2 width-[40%]">
-            Current User is : {currentUser}
-          </p>
-        ) : null}
+        
         {showButton ? (
           <Button text="Start Quiz" onClick={handleButtonClick} />
+        ) : null}
+        {currentUser.length ? (
+          <p className="text-[20px] bg-[#f2bfca] rounded-[10px] text-black pt-3 pb-2 pr-2 width-[40%]">
+            Current User is : {currentUser}
+          </p>
         ) : null}
         {showTable ? <Table tableData={tempData} /> : null}
       </div>
