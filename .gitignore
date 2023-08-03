@@ -23,7 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
-
+.next/
+.next
 sw.js/
 /sw.js
 workbox-714e1d6c.js/
