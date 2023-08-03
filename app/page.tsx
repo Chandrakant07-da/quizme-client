@@ -15,7 +15,7 @@ const Home = () => {
   const [userName, setUserName] = useState("");
   const [showButton, setShowButton] = useState(false);
   const [showTable, setShowTable] = useState(false);
-  const [currentUser, setCurrentuser] = useState("Unknown...");
+  const [currentUser, setCurrentuser] = useState("");
   const [tableInput, setTableInput] = useState([{ name: "", score: 0 }]);
   const handleButtonClick = () => router.push("/quiz");
   const handleSubmit = (event: any) => {
@@ -24,7 +24,7 @@ const Home = () => {
 
     localStoreHandle();
     // Do your work with submitted name
-    console.log("User Name Submitted :", userName);
+    // console.log("User Name Submitted :", userName);
     setCurrentuser(userName);
   };
 
@@ -40,7 +40,7 @@ const Home = () => {
     } else {
       // setting username with score value
       const dataLocal = {
-        score: [],
+        score: [0],
       };
       const dataString = JSON.stringify(dataLocal);
       localStorage.setItem(userName, dataString);
@@ -64,7 +64,7 @@ const Home = () => {
       allData[key] = JSON.parse(`${value}`); // Parse the JSON string back to an object
     }
 
-    console.log(allData);
+    // console.log(allData);
     if (allData) {
       try {
         // Extract current-user value from the input
@@ -85,7 +85,7 @@ const Home = () => {
         setCurrentuser(currentUser);
         setTableInput(allUserData);
       } catch (error) {
-        console.log(error);
+        return console.log(error);
       }
     }
   };
@@ -99,16 +99,16 @@ const Home = () => {
 
   return (
     <>
-      <div className="text-center">
-        <p className="text-white p-4">
+      <div data-testid="main-container" className="text-center">
+        <h3 data-testid="mainpage-heading" className="text-white p-4">
           Do you have what it takes to become the Quiz master?
-        </p>
+        </h3>
         <Image
           className="max-w-[700px] w-full rounded-[10px]"
           src={HomepageImage}
           alt="home-page"
         />
-        <p className="text-[#9F50AC] pt-2 pb-2 text-[20px]">
+        <p id="front-msg" className="text-[#9F50AC] pt-2 pb-2 text-[20px]">
           Submit your name to start quiz..!{" "}
         </p>
         <section className="text-[20px] rounded-[10px] text-black pt-4 p-2 border-[4px]-black">
@@ -121,7 +121,7 @@ const Home = () => {
               onChange={(e) => setUserName(e.target.value)}
             />
             {/* Submit button */}
-            <button className="bg-[#9F50AC] select-none font-bold h-[30px] min-w-[80px] rounded-[3px] border-[4px]-black text-white hover:bg-sky-700">
+            <button data-testid='name-submit-btn' className="bg-[#9F50AC] select-none font-bold h-[30px] min-w-[80px] rounded-[3px] border-[4px]-black text-white hover:bg-sky-700">
               Submit
             </button>
           </form>

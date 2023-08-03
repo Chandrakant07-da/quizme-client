@@ -16,11 +16,14 @@
   }
   
   .myTable thead {
-    background-color: #9ec576;
+    background-color: #759853;
   }
   
   .myTable tr:nth-child(even) {
-    background-color: #f9f9f99d;
+    background-color: #f9f9f9bb;
+  }
+  .myTable tr:nth-child(odd) {
+    color: aliceblue;
   }
   
   .myTable tr:hover {
