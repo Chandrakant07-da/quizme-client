@@ -5,7 +5,7 @@ const withPWA = require("next-pwa")({
     skipWaiting: true,
     scope: '/',
     sw: 'sw.js',
-    disable: process.env.NODE_ENV==='development'
+    // disable: process.env.NODE_ENV==='development'
 })
 
 const nextConfig = {
