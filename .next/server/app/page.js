@@ -337,6 +337,17 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
+/***/ 5284:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9222, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4765, 23))
+
+/***/ }),
+
 /***/ 1640:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -420,7 +431,7 @@ const Home = ()=>{
     const [userName, setUserName] = (0,react_.useState)("");
     const [showButton, setShowButton] = (0,react_.useState)(false);
     const [showTable, setShowTable] = (0,react_.useState)(false);
-    const [currentUser, setCurrentuser] = (0,react_.useState)("Unknown...");
+    const [currentUser, setCurrentuser] = (0,react_.useState)("");
     const [tableInput, setTableInput] = (0,react_.useState)([
         {
             name: "",
@@ -433,7 +444,7 @@ const Home = ()=>{
         setShowButton(true);
         localStoreHandle();
         // Do your work with submitted name
-        console.log("User Name Submitted :", userName);
+        // console.log("User Name Submitted :", userName);
         setCurrentuser(userName);
     };
     function localStoreHandle() {
@@ -448,7 +459,9 @@ const Home = ()=>{
         } else {
             // setting username with score value
             const dataLocal = {
-                score: []
+                score: [
+                    0
+                ]
             };
             const dataString = JSON.stringify(dataLocal);
             localStorage.setItem(userName, dataString);
@@ -470,7 +483,7 @@ const Home = ()=>{
             const value = localStorage.getItem(`${key}`);
             allData[key] = JSON.parse(`${value}`); // Parse the JSON string back to an object
         }
-        console.log(allData);
+        // console.log(allData);
         if (allData) {
             try {
                 // Extract current-user value from the input
@@ -487,7 +500,7 @@ const Home = ()=>{
                 setCurrentuser(currentUser);
                 setTableInput(allUserData);
             } catch (error) {
-                console.log(error);
+                return console.log(error);
             }
         }
     };
@@ -501,9 +514,11 @@ const Home = ()=>{
     };
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            "data-testid": "main-container",
             className: "text-center",
             children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                /*#__PURE__*/ jsx_runtime_.jsx("h3", {
+                    "data-testid": "mainpage-heading",
                     className: "text-white p-4",
                     children: "Do you have what it takes to become the Quiz master?"
                 }),
@@ -513,6 +528,7 @@ const Home = ()=>{
                     alt: "home-page"
                 }),
                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                    id: "front-msg",
                     className: "text-[#9F50AC] pt-2 pb-2 text-[20px]",
                     children: [
                         "Submit your name to start quiz..!",
@@ -532,6 +548,7 @@ const Home = ()=>{
                                     onChange: (e)=>setUserName(e.target.value)
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                    "data-testid": "name-submit-btn",
                                     className: "bg-[#9F50AC] select-none font-bold h-[30px] min-w-[80px] rounded-[3px] border-[4px]-black text-white hover:bg-sky-700",
                                     children: "Submit"
                                 })
@@ -605,7 +622,7 @@ module.exports = __webpack_require__(408)
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [961,944,329], () => (__webpack_exec__(3255)));
+var __webpack_exports__ = __webpack_require__.X(0, [961,944,476], () => (__webpack_exec__(3255)));
 module.exports = __webpack_exports__;
 
 })();
