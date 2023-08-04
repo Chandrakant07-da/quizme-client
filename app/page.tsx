@@ -9,8 +9,14 @@ import Button from "@/components/Button/Button";
 import HomepageImage from "assets/home-pic.png";
 import Table from "@/components/table/Table";
 import TableData from "@/types/table";
+import { register } from "@/public/swDev";
 
 const Home = () => {
+
+  useEffect(() => {
+    register()
+  }, []);
+
   const router = useRouter();
   const [userName, setUserName] = useState("");
   const [showButton, setShowButton] = useState(false);

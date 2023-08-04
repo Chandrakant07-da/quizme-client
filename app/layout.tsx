@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Quicksand } from "next/font/google";
+import Script from "next/script";
 // Logo
 import Logo from "@/assets/react-quiz-logo.svg";
 import "./globals.css";
@@ -34,6 +35,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </main>
       </body>
+      <Script src="/get.js" />
+      <Script src="/wait.js" />
     </html>
   );
 };
