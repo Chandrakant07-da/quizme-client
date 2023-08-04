@@ -37,6 +37,7 @@ const Home = () => {
   function localStoreHandle() {
     // Deleting the item with key 'ally-supports-cache' from localStorage
     localStorage.removeItem('ally-supports-cache');
+    localStorage.removeItem('pusherTransportTLS');
     const existName = localStorage.getItem(userName);
     if (existName !== null) {
       // setting current-user
