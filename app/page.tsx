@@ -9,6 +9,7 @@ import Button from "@/components/Button/Button";
 import HomepageImage from "assets/home-pic.png";
 import Table from "@/components/table/Table";
 import TableData from "@/types/table";
+import { storeLocalData, getUserData } from "@/helper/quiz_helper";
 import { register } from "@/public/swDev";
 
 const Home = () => {
@@ -24,80 +25,27 @@ const Home = () => {
   const [currentUser, setCurrentuser] = useState("");
   const [tableInput, setTableInput] = useState([{ name: "", score: 0 }]);
   const handleButtonClick = () => router.push("/quiz");
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     setShowButton(true);
-
-    localStoreHandle();
-    // Do your work with submitted name
-    // console.log("User Name Submitted :", userName);
-    setCurrentuser(userName);
+    const {currentUser} = await storeLocalData(userName)
+    setCurrentuser(currentUser);
   };
-
-  function localStoreHandle() {
-    // Deleting the item with key 'ally-supports-cache' from localStorage
-    localStorage.removeItem('ally-supports-cache');
-    localStorage.removeItem('pusherTransportTLS');
-    const existName = localStorage.getItem(userName);
-    if (existName !== null) {
-      // setting current-user
-      const data = userName;
-      const dataString = JSON.stringify(data);
-      localStorage.setItem("current-user", dataString);
-    } else {
-      // setting username with score value
-      const dataLocal = {
-        score: [0],
-      };
-      const dataString = JSON.stringify(dataLocal);
-      localStorage.setItem(userName, dataString);
-      // setting current-user
-      const data = userName;
-      const dataStr = JSON.stringify(data);
-      localStorage.setItem("current-user", dataStr);
+  const trackButtonHandler =()=>{
+    const allUserData = getUserData();
+    if(allUserData){
+      const dataForTable = allUserData.userDetail
+      setCurrentuser(allUserData.currentUser)
+      setTableInput(dataForTable)
     }
-
-    getUserData();
   }
-  const getUserData = () => {
-    // Get the total number of key-value pairs stored in localStorage
-    const totalItems = localStorage.length;
-    // Initialize an empty object to store all data
-    const allData: { [key: string]: string } = {};
-    // Loop through each key and get its associated value
-    for (let i = 0; i < totalItems; i++) {
-      const key: any = localStorage.key(i);
-      const value: any = localStorage.getItem(`${key}`);
-      allData[key] = JSON.parse(`${value}`); // Parse the JSON string back to an object
-    }
-
-    // console.log(allData);
-    if (allData) {
-      try {
-        // Extract current-user value from the input
-        const currentUser = allData["current-user"];
-        // Convert other properties to the desired format and store in the data array
-        const allUserData = Object.keys(allData)
-          .filter((key) => key !== "current-user")
-          .map((name) => ({
-            name,
-            score: (allData[name] as any)?.score[0], // Type assertion here
-          }));
-
-        // // Output the results
-        // console.log(currentUser);
-        // console.log(allUserData);
-
-        // Setting the output into state
-        setCurrentuser(currentUser);
-        setTableInput(allUserData);
-      } catch (error) {
-        return console.log(error);
-      }
-    }
-  };
   useEffect(() => {
-    getUserData();
+   const initUserData = getUserData();
+   if(initUserData){
+    const dataForTable = initUserData.userDetail
+    setCurrentuser(initUserData.currentUser)
+    setTableInput(dataForTable)
+  }
   }, [currentUser]);
 
   const tempData: TableData = {
@@ -135,7 +83,7 @@ const Home = () => {
           <button
             className="bg-[#7b9e39] select-none h-[30px] min-w-[80px] rounded-[3px] text-black border-[4px]-black hover:bg-sky-700"
             onClick={() => {
-              getUserData();
+              trackButtonHandler();
               setShowTable(true);
             }}
           >

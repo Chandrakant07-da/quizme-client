@@ -39,18 +39,15 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
     setCurrentQuestionIndex(newQuestionIndex);
   };
   function localStoreHandle(){
-    const currentName = localStorage.getItem('current-user')
-    if(currentName !== null){
-      const nameData = JSON.parse(currentName)
-
-      const dataLocal ={
-        score:[score]
-      }
-      const dataString = JSON.stringify(dataLocal)
-      localStorage.setItem(nameData, dataString);
-    }
+    const userDetailString = localStorage.getItem('user-details')
+    const userDetail = userDetailString ? JSON.parse(userDetailString) : {}
+    const currentUser = userDetail.currentUser
+    const userData = userDetail[`${currentUser}`]
+    userData.score = score ;
+    userDetail[`${currentUser}`] = userData ;
+    const userString = JSON.stringify(userDetail);
+    localStorage.setItem("user-details",userString)
   }
-
 
   return (
     <div className='text-white text-center'>
